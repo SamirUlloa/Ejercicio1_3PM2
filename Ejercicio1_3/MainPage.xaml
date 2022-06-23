@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1_3.MainPage">
+
+    <StackLayout>
+        <!--<Label Text="Nombre" FontSize="20" Padding="5,0,0,5"/>
+        <Entry Placeholder="Ingrese el Nombre" x:Name="txtNombre" Margin="5, 0, 0, 5"/>
+
+        <Label Text="Apellido" FontSize="20" Padding="5,0,0,5"/>
+        <Entry Placeholder="Ingrese el Nombre" x:Name="txtApellido" Margin="5, 0, 0, 5"/>
+
+        <Label Text="Edad" FontSize="20" Padding="5,0,0,5"/>
+        <Entry Placeholder="Ingrese el Nombre" Keyboard="Numeric" x:Name="txtEdad" Margin="5, 0, 0, 5"/>
+
+        <Label Text="Correo" FontSize="20" Padding="5,0,0,5"/>
+        <Entry Placeholder="Ingrese el Nombre" x:Name="txtCorreo" Margin="5, 0, 0, 5"/>
+
+        <Label Text="Dirección" FontSize="20" Padding="5,0,0,5"/>
+        <Entry Placeholder="Ingrese el Nombre" x:Name="txtDireccion" Margin="5, 0, 0, 5"/>-->
+
+        <Label Text="Registrar Personas" HorizontalOptions="Center"/>
+
+        <Entry x:Name="txtId" IsVisible="False"/>
+        <Entry x:Name="txtNombre" Placeholder="Nombre"/>
+        <Entry x:Name="txtApellido" Placeholder="Apellido"/>
+        <Entry x:Name="txtEdad" Placeholder="Edad" Keyboard="Numeric"/>
+        <Entry x:Name="txtCorreo" Placeholder="Correo"/>
+        <Entry x:Name="txtDireccion" Placeholder="Direccion"/>
+
+        <Button x:Name="btnRegistrar" Text="Guardar" Clicked="btnRegistrar_Clicked"/>
+        <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" IsVisible="False"/>
+        <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" IsVisible="False"/>
+        <Button x:Name="btnCancelar" Text="Cancelar" Clicked="btnCancelar_Clicked" IsVisible="False"/>
+
+        <ListView x:Name="listPersonas" ItemSelected="listPersonas_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding id}" Grid.Row="0" Grid.Column="0" TextColor="Blue"/>
+                            <Label Text="{Binding nombre}" Grid.Row="0" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="{Binding Apellido}" Grid.Row="0" Grid.Column="2" TextColor="Blue"/>
+                            <Label Text="{Binding edad}" Grid.Row="0" Grid.Column="3" TextColor="Blue"/>
+                            <Label Text="{Binding correo}" Grid.Row="0" Grid.Column="4" TextColor="Orange"/>
+                            <Label Text="{Binding direccion}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" TextColor="Green"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>
